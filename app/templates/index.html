@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Catalog · AI Song Translator{% endblock %}
+
+{% block content %}
+<section class="catalog">
+  <div class="catalog-controls">
+    <input type="search" id="searchInput" placeholder="Search by title, artist, or lyric" />
+  </div>
+  <ul class="song-list" id="songList">
+    {% for song in songs %}
+      <li class="song-card" data-song-id="{{ song.id }}">
+        <a href="{{ url_for('song_details', song_id=song.id) }}">
+          <h2>{{ song.title }}</h2>
+          <p class="artist">{{ song.artist }} · {{ song.language }}</p>
+          <p class="description">{{ song.description }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='catalog.js') }}"></script>
+{% endblock %}

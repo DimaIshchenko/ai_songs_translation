@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ song.title }} · AI Song Translator{% endblock %}
+
+{% block content %}
+<article class="song-page" data-song-id="{{ song.id }}">
+  <header class="song-hero">
+    <h2>{{ song.title }}</h2>
+    <p class="artist">{{ song.artist }} · Original language: {{ song.language }}</p>
+    <p class="description">{{ song.description }}</p>
+  </header>
+
+  <section class="translation-controls">
+    <label for="languageSelect">Translate to:</label>
+    <select id="languageSelect">
+      <option value="uk" selected>Українська (default)</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="pl">Polski</option>
+      <option value="de">Deutsch</option>
+    </select>
+    <button id="translateButton">Translate with GPT</button>
+    <span id="translationStatus" class="status"></span>
+  </section>
+
+  <div class="lyrics-grid">
+    <div class="lyrics-column">
+      <h3>Original lyrics</h3>
+      <ol id="originalLyrics">
+        {% for line in song.lyrics %}
+          <li class="lyric-line" data-line-index="{{ loop.index0 }}">{{ line }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+    <div class="lyrics-column">
+      <h3>Translation</h3>
+      <ol id="translatedLyrics" class="placeholder">
+        <li>Click “Translate with GPT” to see the Ukrainian version alongside the original.</li>
+      </ol>
+    </div>
+  </div>
+
+  <aside class="explanation-panel" id="explanationPanel">
+    <h3>Line context &amp; references</h3>
+    <p class="placeholder">Select a lyric line to explore memes, slang, and cultural references.</p>
+  </aside>
+</article>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='song.js') }}"></script>
+{% endblock %}

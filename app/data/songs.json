@@ -1,0 +1,47 @@
+[
+  {
+    "id": "neon_dreams",
+    "title": "Neon Dreams",
+    "artist": "Synth Kid",
+    "language": "English",
+    "description": "An homage to midnight drives and internet culture.",
+    "lyrics": [
+      "We chase the glitching skyline after midnight",
+      "Dashboard lit like old arcades in bloom",
+      "You quote a meme from twenty-nineteen",
+      "We laugh like this rerun is brand new",
+      "Autotune prayers through a neon stream",
+      "Hoping the algorithm lets us in"
+    ]
+  },
+  {
+    "id": "coffee_and_code",
+    "title": "Coffee & Code",
+    "artist": "Byte Poet",
+    "language": "English",
+    "description": "Lo-fi reflections on building products with friends.",
+    "lyrics": [
+      "Mugs and monitors on Monday dawn",
+      "Stack traces hum a familiar song",
+      "Deploying dreams with shaky hands",
+      "Standup confessions and rubber bands",
+      "We ship a hotfix from the subway car",
+      "Commit emojis chart how tired we are"
+    ]
+  },
+  {
+    "id": "madrugada_en_madrid",
+    "title": "Madrugada en Madrid",
+    "artist": "Luna Clara",
+    "language": "Spanish",
+    "description": "A gentle synthwave postcard from a sleepless city night.",
+    "lyrics": [
+      "Sábanas frías besan mi piel",
+      "El metro canta historias de papel",
+      "Faros pintando sombras de color",
+      "Selfies brillando junto al reloj",
+      "Sueños virales cruzan el canal",
+      "Madrid despierta, suena digital"
+    ]
+  }
+]
